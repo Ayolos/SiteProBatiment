@@ -1,5 +1,4 @@
 <script setup>
-import Banner from '/public/Banner.jpeg'
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const props = defineProps({
@@ -16,7 +15,7 @@ const props = defineProps({
             <h1 class="text-[#CE9931] font-bold sm:text-4xl text-2xl backdrop-sepia p-2 rounded-md">
                 <slot name="title"></slot>
             </h1>
-            <p class="sm:text-xl text-md text-gray-300 shadow-xl">
+            <p class="sm:text-xl text-md text-gray-300 drop-shadow-xl">
                 <slot name="subtitle"></slot>
             </p>
         </div>

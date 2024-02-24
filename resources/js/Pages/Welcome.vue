@@ -12,12 +12,12 @@
             <Caroussel :images="data.imageCollection.items.map(item => item.carrouselCollection.items.map(carouselItem => carouselItem.url)).flat()"></Caroussel>
             <Tab>
                 <template #tab-1>
-                    <img v-if="data?.imageCollection?.items[0].tab1?.url" :src="data?.imageCollection?.items[0].tab1?.url" alt="Rénovation Intérieure" class="w-[40vh] h-auto rounded-lg mx-auto mt-8"/>
+                    <img v-if="data?.imageCollection?.items[0].tab1?.url" :src="data?.imageCollection?.items[0].tab1?.url" alt="image de tab" class="w-[40vh] h-auto rounded-lg mx-auto mt-8"/>
                 </template>
                 <template #tab-2>
                     <div class="flex flex-row h-[30vh] gap-4 overflow-x-hidden">
-                        <img v-if="data?.imageCollection?.items[0].tabsCollection?.items[0].url" :src="data?.imageCollection?.items[0].tabsCollection?.items[0].url" alt="Rénovation Intérieure" class="object-cover rounded-lg basis-1/2"/>
-                        <img v-if="data?.imageCollection?.items[0].tabsCollection?.items[1].url" :src="data?.imageCollection?.items[0].tabsCollection?.items[1].url" alt="Rénovation Intérieure" class="object-cover rounded-lg basis-1/2"/>
+                        <img v-if="data?.imageCollection?.items[0].tabsCollection?.items[0].url" :src="data?.imageCollection?.items[0].tabsCollection?.items[0].url" alt="image de tab" class="object-cover rounded-lg basis-1/2"/>
+                        <img v-if="data?.imageCollection?.items[0].tabsCollection?.items[1].url" :src="data?.imageCollection?.items[0].tabsCollection?.items[1].url" alt="image de tab" class="object-cover rounded-lg basis-1/2"/>
                     </div>
                 </template>
             </Tab>
@@ -27,17 +27,14 @@
     </AppLayout>
 </template>
 <script setup>
-import { FwbCarousel } from 'flowbite-vue'
-import { Head } from '@inertiajs/vue3';
-import {ref, onMounted, onUnmounted, watch, reactive} from 'vue';
-import CardInfo from "@/Components/App/Card/CardInfo.vue";
+import {ref, onMounted, onUnmounted} from 'vue';
 import BannerImage from "@/Components/App/Banner/BannerImage.vue";
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Caroussel from "@/Components/App/Caroussel/Caroussel.vue";
 import Tab from "@/Components/App/Tab/Tab.vue";
 import BigCard from "@/Components/App/Card/BigCard.vue";
 import {useContentfulFetch} from "@/Composable/fetchContentfullApi.js";
-import Banner from "/public/Banner.jpeg";
+
 // Import other components...
 
 const query = `{

@@ -11,7 +11,7 @@
             <!-- Add another tab -->
             <li>
                 <button :class="{ 'bg-curr text-white': isActiveTab('dashboard'), 'hover:text-gray-900 bg-gray-50 hover:bg-gray-100': !isActiveTab('dashboard') }" class="inline-flex items-center px-4 py-3 rounded-lg w-full" @click="setActiveTab('dashboard')">
-                    Aménagement Extérieur
+                    Rénovation complète
                 </button>
             </li>
 <!--            <li>
@@ -50,9 +50,8 @@
 </template>
 
 <script setup>
-import {computed, ref} from "vue";
+import { ref} from "vue";
 import { initFlowbite } from "flowbite";
-import Banner from "/public/Banner.jpeg";
 
 const activeTab = ref("profile");
 

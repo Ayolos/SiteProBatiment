@@ -1,12 +1,10 @@
 <template>
-    <div class="carousel relative w-full h-[35vh] overflow-hidden rounded-xl">
-        <transition name="slide" class="w-full">
+    <div class="carousel relative w-full sm:h-[35vh] overflow-hidden rounded-xl">
             <div class="slide-container w-full flex flex-row" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                 <div v-for="(image, index) in visibleImages" :key="index" class="slide w-full shrink-0">
-                    <img :src="image" alt="carousel-image" class="object-cover h-full">
+                    <img :src="image" alt="carousel-image" class="object-cover md:w-full h-full">
                 </div>
             </div>
-        </transition>
         <button @click="prevSlide" class="nav-btn rounded-full left-2 top-1/2 transform -translate-y-1/2 absolute px-4 py-2 bg-gray-300 text-gray-700">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -78,26 +76,6 @@ onMounted(() => {
 
 .nav-btn {
     /* Your button styles */
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    opacity: 1;
-}
-
-.fade-enter,
-.fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-    opacity: 0;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-    transition: transform 0.5s ease;
-}
-
-.slide-enter,
-.slide-leave-to /* .slide-leave-active in <2.1.8 */ {
-    transform: translateX(100%);
 }
 
 /* Center the image */
