@@ -18,9 +18,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <div v-if="type === 'normal'" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div v-if="type === 'normal'" class="bg-white border border-gray-200 rounded-lg shadow">
         <div>
-            <img class="rounded-t-lg w-full" :src="url" alt="images de la carte" />
+            <img class="rounded-t-lg w-full h-48 object-cover" :src="url" alt="images de la carte" />
         </div>
         <div class="p-5">
             <div>
@@ -33,18 +33,6 @@ const props = defineProps({
             </p>
         </div>
     </div>
-    <div v-else class="flex flex-row lg:flex-col items-center bg-white border border-gray-200 h-96 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-        <img class="object-cover h-full w-1/2 rounded-l sm:flex" :src="url" alt="images de la carte">
-        <div class="flex flex-col h-full justify-center gap-2 p-4 leading-normal">
-            <h5 class="mb-2 text-sm md:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <slot name="title"></slot>
-            </h5>
-            <p class="mb-3 font-normal text-sm md:text-xl text-gray-700 dark:text-gray-400">
-                <slot name="description"></slot>
-            </p>
-        </div>
-    </div>
-
 </template>
 
 <style scoped>

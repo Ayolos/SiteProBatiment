@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel relative w-full sm:h-[35vh] overflow-hidden rounded-xl">
+    <div class="carousel relative w-full h-[35vh] overflow-hidden rounded-xl">
             <div class="slide-container w-full flex flex-row" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                 <div v-for="(image, index) in visibleImages" :key="index" class="slide w-full shrink-0">
                     <img :src="image" alt="carousel-image" class="object-cover md:w-full h-full">

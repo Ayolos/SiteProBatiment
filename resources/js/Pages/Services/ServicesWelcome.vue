@@ -43,54 +43,27 @@ onUnmounted(() => {
     <AppLayout v-if="data">
         <div class="md:pt-20 md:px-20 p-8">
             <h1 class="text-3xl font-bold pb-16">Découvrer nos différents services</h1>
-            <div v-if="!isWindowBelow735" class="flex flex-row justify-center gap-10">
-                <CardInfo icon="fa-user-secret" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[0].url">
+            <div class="flex lg:flex-row flex-col gap-10">
+                <CardInfo icon="fa-user-secret" class="basis-1/3" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[0].url">
                     <template #title>
                         CONSTRUCTION
                     </template>
                     <template #description>
                         Vous avez le projet d’une nouvelle construction ? Confiez-le-nous, de la conception à la finition ! Nous appliquons toute notre expertise dans la réalisation de nouvelles constructions aux normes, grâce à une équipe pluridisciplinaire et notre entreprise certifiée Qualibat RGE !                    </template>
                 </CardInfo>
-                <CardInfo icon="fa-user-secret" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[1].url">
+                <CardInfo icon="fa-user-secret" class="basis-1/3" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[1].url">
                     <template #title>
                         EXTENSION
                     </template>
                     <template #description>
                         Besoin d'espace supplémentaire? Notre équipe spécialisée en extensions de bâtiments est là pour vous aider à agrandir votre maison ou votre entreprise. De la conception à la construction, nous travaillons en étroite collaboration avec vous pour créer des extensions fonctionnelles et esthétiques qui répondent à vos besoins spécifiques. Découvrez comment nous pouvons transformer votre espace existant en quelque chose de nouveau et de remarquable.                    </template>
                 </CardInfo>
-                <CardInfo icon="fa-user-secret" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[2].url">
+                <CardInfo icon="fa-user-secret" class="basis-1/3" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[2].url">
                     <template #title>
                         RENOVATION INTERIEURE
                     </template>
                     <template #description>
                         Le confort est le maître mot dans une maison. Afin d’y vivre sereinement, notre équipe d’experts vous accompagne dans tous vos projets de rénovation intérieure. Peinture, rénovation de plomberie et d’électricité, isolation thermique et acoustique, rénovation de cuisine et salle de bain, découvrez tous les services que vous propose notre entreprise certifiée Qualibat RGE !                    </template>
-                </CardInfo>
-            </div>
-            <!-- End of conditional rendering -->
-            <div v-else class="flex flex-col gap-14">
-                <CardInfo icon="fa-user-secret" type="horizontal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[0].url">
-                    <template #title>
-                        Bienvenue chez BTP, Votre Partenaire de Confiance pour la Rénovation
-                    </template>
-                    <template #description>
-                        Chez BTP, nous comprenons l'importance de créer des espaces qui vous ressemblent, qui allient confort, style et fonctionnalité.
-                    </template>
-                </CardInfo>
-                <CardInfo icon="fa-user-secret" type="horizontal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[1].url">
-                    <template #title>
-                        Bienvenue chez BTP, Votre Partenaire de Confiance pour la Rénovation
-                    </template>
-                    <template #description>
-                        Chez BTP, nous comprenons l'importance de créer des espaces qui vous ressemblent, qui allient confort, style et fonctionnalité.
-                    </template>
-                </CardInfo>
-                <CardInfo icon="fa-user-secret" type="horizontal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[2].url">
-                    <template #title>
-                        Bienvenue chez BTP, Votre Partenaire de Confiance pour la Rénovation
-                    </template>
-                    <template #description>
-                        Chez BTP, nous comprenons l'importance de créer des espaces qui vous ressemblent, qui allient confort, style et fonctionnalité.
-                    </template>
                 </CardInfo>
             </div>
             <section class="py-28">
@@ -106,7 +79,7 @@ onUnmounted(() => {
                 <h4 class="text-4xl font-bold dark:text-white pb-16">Nos travaux</h4>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div v-for="i in data?.pageServicesCollection?.items[0]?.galleriesCollection?.items" class="object-cover">
-                        <img class="h-auto max-w-full rounded-lg h-full object-cover" :src="i.url" alt="">
+                        <img class="h-auto max-w-full rounded-lg h-full aspect-square object-cover" :src="i.url" alt="">
                     </div>
                 </div>
             </section>

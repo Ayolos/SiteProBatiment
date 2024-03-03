@@ -34,7 +34,7 @@ const {data, isLoading} = useContentfulFetch(query)
             <img :src="data?.pageAProposCollection?.items[0]?.imageSection.url" alt="image de section" class="w-1/2 overflow-clip rounded-xl" />
             <div class="basis-1/2 gap-2 flex flex-col">
                 <h1 class="font-bold text-xl">POUR <span class="text-curr font-bold">RENOV&VOUS</span> CHAQUE PROJET EST UNE CHANCE.</h1>
-                <p class="">
+                <p class="text-gray-500">
                     Une chance de construire l’avenir, l’opportunité d’accompagner un territoire, d’agir durablement au profit de celles et ceux qui y vivent ou qui y travaillent. Parce que chaque projet est porteur d’un potentiel d’avenir, nos équipes travaillent au quotidien avec nos clients et nos partenaires pour imaginer et construire des solutions ambitieuses en matière de développement durable. Si chacun de nos projets est unique, notre manière de construire nos opérations reste fidèle à nos valeurs:<span class="text-curr font-bold">Responsable et Engagé</span>.
                 </p>
             </div>

@@ -23,7 +23,6 @@
             </Tab>
             <BigCard></BigCard>
         </div>
-        <Footer></Footer>
     </AppLayout>
 </template>
 <script setup>
