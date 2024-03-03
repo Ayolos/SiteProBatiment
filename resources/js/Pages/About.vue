@@ -25,7 +25,7 @@ const {data, isLoading} = useContentfulFetch(query)
             <h1 class="font-bold text-xl ">RENOV & VOUS</h1>
             <p class="text-gray-500 italic">Entreprise générale de bâtiment certifiée Qualibat RGE, <span class="text-curr font-bold">Rénov&Vous</span> est une organisation qui regroupe en son sein différents corps de métier. Grâce aux diverses compétences qu’elle rassemble, elle est ainsi capable de gérer des <span class="text-curr font-bold">travaux de rénovation ou de construction </span> du début à la fin. Pluridisciplinaire, l’entreprise générale du bâtiment offre de multiples prestations: maçonnerie, menuiserie, isolation, électricité, plomberie, chauffage, peinture, revêtements de sols, etc. </p>
         </div>
-        <img class="rounded md:w-1/2 h-full shadow-2xl" :src="data?.pageAProposCollection?.items[0]?.mainImage?.url" alt="Extra large avatar">
+        <img class="rounded md:w-1/2 md:h-full h-[30vh] object-cover shadow-2xl" :src="data?.pageAProposCollection?.items[0]?.mainImage?.url" alt="Extra large avatar">
     </section>
     <hr class="border-1 border-gray-300">
     <section class="h-full flex flex-col gap-14 items-start p-5 lg:p-20 mb-20">
