@@ -77,9 +77,9 @@ onUnmounted(() => {
             </section>
             <section class="pb-20">
                 <h4 class="text-4xl font-bold dark:text-white pb-16">Nos travaux</h4>
-                <div class="grid grid-cols-1 aspect-square md:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div v-for="i in data?.pageServicesCollection?.items[0]?.galleriesCollection?.items" class="object-cover">
-                        <img class="h-auto max-w-full rounded-lg h-full aspect-square object-cover" :src="i.url" alt="">
+                        <img class="max-w-full rounded-lg aspect-square object-cover" :src="i.url" alt="">
                     </div>
                 </div>
             </section>
