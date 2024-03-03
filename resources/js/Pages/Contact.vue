@@ -30,7 +30,7 @@ const clearNotification = () => {
 
 const submit = async () => {
     try {
-        //router.post(route('contact.send'), form);
+        router.post(route('contact.send'), form);
         clearForm();
         notification.message = 'Message envoyé!';
         notification.type = 'success';
