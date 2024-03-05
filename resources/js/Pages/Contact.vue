@@ -2,10 +2,10 @@
 
 import AppLayout from "@/Layouts/AppLayout.vue";
 import {reactive} from "vue";
-import {router} from "@inertiajs/vue3";
+import {router, useForm} from "@inertiajs/vue3";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
-const form = reactive({
+const form = useForm({
     email: '',
     subject: '',
     message: ''
@@ -29,16 +29,19 @@ const clearNotification = () => {
 };
 
 const submit = async () => {
-    try {
-        router.post(route('contact.send'), form);
-        clearForm();
-        notification.message = 'Message envoyé!';
-        notification.type = 'success';
-        setTimeout(clearNotification, 2000); // Auto-dismiss after 5 seconds
-    } catch (error) {
-        notification.message = 'Erreur lors de l\'envoi du message! Veuillez réessayer.';
-        notification.type = 'error';
-    }
+    form.post(route('contact.send'), {
+        preserveScroll: true,
+        onSuccess: () => {
+            clearForm();
+            notification.message = 'Message envoyé!';
+            notification.type = 'success';
+            setTimeout(clearNotification, 2000); // Auto-dismiss after 2 seconds
+        },
+        onError: () => {
+            notification.message = 'Erreur lors de l\'envoi du message! Veuillez réessayer.';
+            notification.type = 'error';
+        }
+    });
 };
 
 </script>
