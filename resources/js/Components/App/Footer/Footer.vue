@@ -19,7 +19,7 @@ import Logo from '/public/Logo.png'
                 </ul>
             </div>
             <hr class="my-6 border-gray-500 sm:mx-auto lg:my-8" />
-            <span class="block text-sm text-center pb-5 text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="" class="hover:underline">Renov&Vous™</a>. Tout les droit sont réservé.</span>
+            <span class="block text-sm text-center pb-5 text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="" class="hover:underline">Renov&Vous™</a>. Tout les droits sont réservé.</span>
         </div>
     </footer>
 </template>
