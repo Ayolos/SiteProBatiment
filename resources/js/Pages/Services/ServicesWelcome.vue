@@ -5,6 +5,7 @@ import CardInfo from "@/Components/App/Card/CardInfo.vue";
 import Caroussel from "@/Components/App/Caroussel/Caroussel.vue";
 import {onMounted, onUnmounted, ref} from "vue";
 import {useContentfulFetch} from "@/Composable/fetchContentfullApi.js";
+import {Head} from '@inertiajs/vue3';
 
 const query = `{
    pageServicesCollection{
@@ -40,6 +41,10 @@ onUnmounted(() => {
 </script>
 
 <template>
+    <Head>
+        <title>Nos Services</title>
+        <meta name="description" content="Découvrez nos services de construction, rénovation et extension." />
+    </Head>
     <AppLayout v-if="data">
         <div class="md:pt-20 md:px-20 p-8">
             <h1 class="text-3xl font-bold pb-16">Découvrer nos différents services</h1>
