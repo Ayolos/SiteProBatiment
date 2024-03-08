@@ -2,6 +2,7 @@
 
 import AppLayout from "@/Layouts/AppLayout.vue";
 import {useContentfulFetch} from "@/Composable/fetchContentfullApi.js";
+import {Head} from '@inertiajs/vue3';
 
 const query = `{
     pageAProposCollection{
@@ -18,6 +19,10 @@ const {data, isLoading} = useContentfulFetch(query)
 </script>
 
 <template>
+    <Head>
+        <title>A propos de nous</title>
+        <meta name="description" content="Découvrez qui nous sommes et ce que nous faisons." />
+    </Head>
 <AppLayout v-if="data">
     <section class="h-full flex md:flex-row flex-col gap-14 justify-center items-center py-20 px-10 sm:px-20">
         <div class="flex flex-col gap-5 pt-9">

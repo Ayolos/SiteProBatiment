@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <title>Rénov&Vous</title>
+        <meta name="description" content="Rénov&Vous est une entreprise générale de bâtiment certifiée Qualibat RGE, regroupant divers corps de métier pour gérer des travaux de rénovation ou de construction de manière globale. Avec une expertise pluridisciplinaire incluant maçonnerie, menuiserie, électricité, plomberie, etc., nous offrons des prestations de qualité optimale à travers le Nord de la France. Que ce soit dans le secteur public ou privé, nous intervenons dans divers domaines tels que la santé, l'éducation, le commerce, et nous sommes constamment à la recherche d'innovations pour proposer des solutions flexibles à nos clients."/>
+    </Head>
     <AppLayout>
         <BannerImage :url="data?.imageCollection?.items[0]?.imageAccueil?.url">
             <template #title>
@@ -33,6 +37,7 @@ import Caroussel from "@/Components/App/Caroussel/Caroussel.vue";
 import Tab from "@/Components/App/Tab/Tab.vue";
 import BigCard from "@/Components/App/Card/BigCard.vue";
 import {useContentfulFetch} from "@/Composable/fetchContentfullApi.js";
+import {Head} from '@inertiajs/vue3';
 
 // Import other components...
 

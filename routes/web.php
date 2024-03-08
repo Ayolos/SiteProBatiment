@@ -26,16 +26,6 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
@@ -50,5 +40,9 @@ Route::get('/about', function () {
 Route::get('/services', function () {
     return Inertia::render('Services/ServicesWelcome');
 })->name('services');
+
+Route::fallback(function () {
+    return redirect('/');
+});
 
 require __DIR__.'/auth.php';

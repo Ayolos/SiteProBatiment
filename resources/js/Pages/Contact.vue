@@ -4,6 +4,7 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import {reactive} from "vue";
 import {router, useForm} from "@inertiajs/vue3";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {Head} from '@inertiajs/vue3';
 
 const form = useForm({
     email: '',
@@ -47,6 +48,10 @@ const submit = async () => {
 </script>
 
 <template>
+    <Head>
+        <title>Contactez nous</title>
+        <meta name="description" content="Vous rencontrez un problème ? n'hésitez pas à nous contacter !" />
+    </Head>
     <AppLayout>
         <div class="pb-20 pt-20">
             <section class="flex justify-center items-center">
