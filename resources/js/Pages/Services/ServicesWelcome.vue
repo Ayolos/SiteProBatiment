@@ -48,7 +48,7 @@ onUnmounted(() => {
     <AppLayout v-if="data">
         <div class="md:pt-20 md:px-20 p-8">
             <h1 class="text-3xl font-bold pb-16">Découvrer nos différents services</h1>
-            <div class="flex lg:flex-row flex-col gap-10">
+            <div class="flex lg:flex-row flex-col gap-10 text-justify">
                 <CardInfo icon="fa-user-secret" class="basis-1/3" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[0].url">
                     <template #title>
                         CONSTRUCTION
@@ -71,7 +71,7 @@ onUnmounted(() => {
                         Le confort est le maître mot dans une maison. Afin d’y vivre sereinement, notre équipe d’experts vous accompagne dans tous vos projets de rénovation intérieure. Peinture, rénovation de plomberie et d’électricité, isolation thermique et acoustique, rénovation de cuisine et salle de bain, découvrez tous les services que vous propose notre entreprise certifiée Qualibat RGE !                    </template>
                 </CardInfo>
             </div>
-            <section class="py-28">
+            <section class="py-28 text-justify">
                 <Caroussel :images="data?.pageServicesCollection?.items.map(item => item.carrouselCollection.items.map(carouselItem => carouselItem.url)).flat()"></Caroussel>
                 <div class="pt-24">
                     <h4 class="text-2xl font-bold pb-4">Rénov&Vous: Votre Partenaire de Confiance pour la Construction et la Rénovation Immobilière</h4>

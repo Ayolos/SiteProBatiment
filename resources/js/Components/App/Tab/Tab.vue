@@ -14,12 +14,6 @@
                     Rénovation complète
                 </button>
             </li>
-<!--            <li>
-                <button :class="{ 'bg-curr text-white': isActiveTab('test'), 'hover:text-gray-900 bg-gray-50 hover:bg-gray-100': !isActiveTab('test') }" class="inline-flex items-center px-4 py-3 rounded-lg w-full" @click="setActiveTab('test')">
-                    Rénovation Complète
-                </button>
-            </li>-->
-            <!-- Add one more tab here -->
         </ul>
 
         <!-- Content associated with tabs -->
@@ -27,7 +21,7 @@
             <!-- Profile Tab Content -->
             <div v-if="activeTab === 'profile'">
                 <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Rénovation intérieure</h3>
-                <p class="mb-2"><span class="text-[#CE9931] font-bold">Rénov&Vous</span> intervient également sur des <span class="text-[#CE9931] font-bold">projets de rénovation et de restructuration de bâtiments existants</span>, en proposant des solutions sur mesure pour réhabiliter le patrimoine tout en répondant aux attentes environnementales et en respectant les contraintes techniques.
+                <p class="mb-2 text-justify"><span class="text-[#CE9931] font-bold">Rénov&Vous</span> intervient également sur des <span class="text-[#CE9931] font-bold">projets de rénovation et de restructuration de bâtiments existants</span>, en proposant des solutions sur mesure pour réhabiliter le patrimoine tout en répondant aux attentes environnementales et en respectant les contraintes techniques.
                 </p>
                 <slot name="tab-1">
 
@@ -40,11 +34,6 @@
                 <div class="w-full xl:flex-row flex-col gap-4 flex justify-center">
                 </div>
             </div>
-            <!-- Add content sections for the new tab -->
-<!--            <div v-if="activeTab === 'test'">
-                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Construction</h3>
-                <p class="mb-2">Pour une rénovation complète de votre domicile, notre équipe vous accompagne de A à Z. Des travaux de plomberie à l'aménagement intérieur, une expertise globale pour un résultat final harmonieux.</p>
-            </div>-->
         </div>
     </div>
 </template>
