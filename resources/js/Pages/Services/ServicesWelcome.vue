@@ -54,7 +54,8 @@ onUnmounted(() => {
                         CONSTRUCTION
                     </template>
                     <template #description>
-                        Vous avez le projet d’une nouvelle construction ? Confiez-le-nous, de la conception à la finition ! Nous appliquons toute notre expertise dans la réalisation de nouvelles constructions aux normes, grâce à une équipe pluridisciplinaire et notre entreprise certifiée Qualibat RGE !                    </template>
+                        Vous avez le projet d’une nouvelle construction ? Confiez-le-nous, de la conception à la finition ! Nous appliquons toute notre expertise dans la réalisation de nouvelles constructions aux normes, grâce à une équipe pluridisciplinaire et notre entreprise certifiée Qualibat RGE !
+                    </template>
                 </CardInfo>
                 <CardInfo icon="fa-user-secret" class="basis-1/3" type="normal" :url="data?.pageServicesCollection?.items[0]?.imageCarteCollection?.items[1].url">
                     <template #title>

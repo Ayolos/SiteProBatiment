@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Nord Equipement Fermetures">
 
-        <title>Laravel</title>
+        <title>Nord Equipement Fermetures</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
