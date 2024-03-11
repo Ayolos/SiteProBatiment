@@ -2,6 +2,7 @@
     <Head>
         <title>Accueil</title>
         <meta name="description" content="Rénov&Vous est une entreprise générale de bâtiment certifiée Qualibat RGE, regroupant divers corps de métier pour gérer des travaux de rénovation ou de construction de manière globale. Avec une expertise pluridisciplinaire incluant maçonnerie, menuiserie, électricité, plomberie, etc., nous offrons des prestations de qualité optimale à travers le Nord de la France. Que ce soit dans le secteur public ou privé, nous intervenons dans divers domaines tels que la santé, l'éducation, le commerce, et nous sommes constamment à la recherche d'innovations pour proposer des solutions flexibles à nos clients."/>
+        <meta name="keywords" content="Renov&Vous, rénovation, rénover, travaux, maison, appartement, aménagement, décoration, intérieur, extérieur, bricolage, construction, amélioration, habitat, design, architecture, entreprise, France">
     </Head>
     <AppLayout>
         <BannerImage :url="data?.imageCollection?.items[0]?.imageAccueil?.url">
