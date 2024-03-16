@@ -48,11 +48,6 @@ const query = `{
           imageAccueil {
             url
           }
-          imageCarteCollection {
-            items {
-              url
-            }
-          }
           carrouselCollection {
             items {
               url
