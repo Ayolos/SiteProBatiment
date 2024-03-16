@@ -9,7 +9,6 @@ const query = `{
         items{
             mainImage{url}
             imageSection{url}
-            carrouselCollection{items{url}}
         }
     }
 }`;
